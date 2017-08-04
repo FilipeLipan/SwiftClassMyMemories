@@ -7,3 +7,6 @@
 
 #### Primeira aula
 - git clone -b first-class https://github.com/FilipeLipan/SwiftClassMyMemories.git
+
+#### Primeira aula
+- git clone -b second-class https://github.com/FilipeLipan/SwiftClassMyMemories.git
