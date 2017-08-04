@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     
     func requestPhotoPermissions() {
-        
+		
         PHPhotoLibrary.requestAuthorization { [unowned self]
             
             authStatus in
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
                 
                 if authStatus == .authorized {
                     
-                    //self.req...
+                    self.requestRecordPermissions()
                     
                 } else {
                     
@@ -44,16 +44,70 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    
+	
+    func requestRecordPermissions() {
+	
+		AVAudioSession.sharedInstance().requestRecordPermission { [unowned self]
+		
+			allowed in
+			
+			DispatchQueue.main.async {
 
+				if allowed {
+				
+					self.requestTranscribePermissions()
+				
+				} else {
+				
+					self.permissionsLabel.text = "As permissões para gravação de áudio foram negadas, por favor ative as nas configurações de seu iPhone"
+				
+				}
+
+			}
+		
+		}
+		
+	}
+	
+	func requestTranscribePermissions() {
+		
+		SFSpeechRecognizer.requestAuthorization { [unowned self]
+			
+			authStatus in
+			
+			DispatchQueue.main.async {
+				
+				if authStatus == .authorized {
+					
+					self.authorizationComplete()
+					
+				} else {
+					
+					self.permissionsLabel.text = "As permissões para transcrição de áudio foram negadas. Favor ativar nas configurações de seu iPhone"
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	func authorizationComplete() {
+		
+		dismiss(animated: true)
+		
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     @IBAction func requestPermissions(_ sender: Any) {
-        
+		
+		requestPhotoPermissions()
+		
     }
 
 }

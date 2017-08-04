@@ -34,5 +34,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>As permissões para acessar suas fotos permitirão ao aplicativo coletar memórias para a sua lista</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>As permissões para gravação de áudio possibilitarão ao aplicativo gravar sua lembrança sobre determinadas memórias.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>As permissões de transição de áudio permitirão ao aplicativo transcrever sua fala e facilitar a busca de memórias</string>
 </dict>
 </plist>
