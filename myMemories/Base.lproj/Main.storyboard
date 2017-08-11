@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jec-jf-s9e">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Dg-FA-8gI">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bem-vindo-->
+        <!--Bem Vindo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myMemories" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,25 +18,24 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="4j1-KO-bsf">
-                                <rect key="frame" x="20" y="180" width="335" height="307"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ioE-12-z5T">
+                                <rect key="frame" x="20" y="119.5" width="280" height="329.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGu-7F-kfP">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="215"/>
-                                        <string key="text">De modo a funcionar corretamente, o aplicativo myMemories precisa de permissões para acessar a biblioteca de fotos, gravar sua voz (microfone) e transcrever o que você disse. Clique no botão abaixo e libere as permissões necessárias. Você pode mudar de decisão depois nas Configurações do seu celular.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpE-Nf-1lM">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="249.5"/>
+                                        <string key="text">De modo a funcionar corretamente o aplicativo myMemories precisa de permissoes para acessar a biblioteca de fotos, gravar sua voz no microfone e transcrever o que voce diz. Clique no botao abaixo e libere as permissoes necessarias, voce pode mudar de decisao depois nas configuracoes do seu celular.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfm-NR-LmJ">
-                                        <rect key="frame" x="0.0" y="265" width="335" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtJ-ea-fhb">
+                                        <rect key="frame" x="0.0" y="299.5" width="280" height="30"/>
                                         <state key="normal" title="Continuar"/>
                                         <connections>
-                                            <action selector="requestPermissions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q2g-dA-1nc"/>
+                                            <action selector="requestPermission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahq-Ax-tNY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -44,113 +43,113 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4j1-KO-bsf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OWO-cF-DJr"/>
-                            <constraint firstItem="4j1-KO-bsf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-40" id="kOH-LY-LpY"/>
-                            <constraint firstItem="4j1-KO-bsf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lqU-HV-Od8"/>
+                            <constraint firstItem="ioE-12-z5T" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-40" id="EwX-iM-4G7"/>
+                            <constraint firstItem="ioE-12-z5T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GSs-uj-lyt"/>
+                            <constraint firstItem="ioE-12-z5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="du0-Le-5VC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Bem-vindo" id="4uZ-5P-DuS"/>
+                    <navigationItem key="navigationItem" title="Bem Vindo" id="uN0-aw-od3"/>
                     <connections>
-                        <outlet property="permissionsLabel" destination="jGu-7F-kfP" id="cMN-4B-k79"/>
+                        <outlet property="PermissionLabel" destination="dpE-Nf-1lM" id="CWW-7v-Hgg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1229.5999999999999" y="138.0809595202399"/>
+            <point key="canvasLocation" x="735" y="708"/>
         </scene>
         <!--Memories View Controller-->
-        <scene sceneID="jPb-wq-ihg">
+        <scene sceneID="hmc-Zu-eJA">
             <objects>
-                <collectionViewController id="ZG6-zU-9GS" customClass="MemoriesViewController" customModule="myMemories" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="TGl-Qq-IZg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <collectionViewController id="nDj-lQ-yqO" customClass="MemoriesViewController" customModule="myMemories" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="hAX-ZK-Top">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="O6q-gI-GTg">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="C0T-ZC-Mpi">
                             <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Memory" id="MpW-Ff-R9e" customClass="MemoryCell" customModule="myMemories" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="50" width="200" height="200"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Memory" id="ScT-YC-9Ml" customClass="MemoryCell" customModule="myMemories" customModuleProvider="target">
+                                <rect key="frame" x="60" y="50" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9VH-il-4rs">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOT-Gt-nxb">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <connections>
-                                    <outlet property="imageView" destination="9VH-il-4rs" id="3OR-3Z-9jV"/>
+                                    <outlet property="imageView" destination="rOT-Gt-nxb" id="pp4-29-0QR"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="Kch-ll-3Ex">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="A9R-3P-hbl">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="hE6-TT-YlO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JNh-SN-keX">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
-                                        <outlet property="delegate" destination="ZG6-zU-9GS" id="WxH-ef-pdc"/>
+                                        <outlet property="delegate" destination="nDj-lQ-yqO" id="fgh-wt-4ob"/>
                                     </connections>
                                 </searchBar>
                             </subviews>
                         </collectionReusableView>
                         <connections>
-                            <outlet property="dataSource" destination="ZG6-zU-9GS" id="qIn-fH-gww"/>
-                            <outlet property="delegate" destination="ZG6-zU-9GS" id="KSZ-ui-pmo"/>
+                            <outlet property="dataSource" destination="nDj-lQ-yqO" id="ENP-cT-Wj8"/>
+                            <outlet property="delegate" destination="nDj-lQ-yqO" id="1Wn-cY-K57"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="sp0-Kr-lOc"/>
+                    <navigationItem key="navigationItem" id="mTb-Gb-Td2"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iCQ-fG-4Ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2EU-CT-Gal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3143.1999999999998" y="138.0809595202399"/>
+            <point key="canvasLocation" x="2385" y="708"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="R15-NE-hdQ">
+        <scene sceneID="ZE2-1d-msK">
             <objects>
-                <navigationController storyboardIdentifier="Permissions" automaticallyAdjustsScrollViewInsets="NO" id="5De-Gv-hro" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Permission" automaticallyAdjustsScrollViewInsets="NO" id="Zpu-r4-IVj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="79P-oa-z6Q">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P5l-Xr-dGr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VPs-EH-e2m"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tca-LW-e5X"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MAe-6s-hb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aV-lg-9Df" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="15" y="708"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Q4J-eC-jR9">
+        <scene sceneID="Igz-iN-A7S">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jec-jf-s9e" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Dg-FA-8gI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rfl-Ft-e5i">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e2K-5U-ZrU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ZG6-zU-9GS" kind="relationship" relationship="rootViewController" id="ryU-KC-xzp"/>
+                        <segue destination="nDj-lQ-yqO" kind="relationship" relationship="rootViewController" id="76P-0v-LmD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yRa-Wo-TQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nqk-WK-FqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="137.18140929535232"/>
+            <point key="canvasLocation" x="1659" y="708"/>
         </scene>
     </scenes>
 </document>

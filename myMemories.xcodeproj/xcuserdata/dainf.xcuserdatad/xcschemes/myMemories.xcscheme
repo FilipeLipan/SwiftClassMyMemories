@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA1607081F2AB55C00680948"
+               BlueprintIdentifier = "F555036E1F2AB56400F7B9F2"
                BuildableName = "myMemories.app"
                BlueprintName = "myMemories"
                ReferencedContainer = "container:myMemories.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA1607081F2AB55C00680948"
+            BlueprintIdentifier = "F555036E1F2AB56400F7B9F2"
             BuildableName = "myMemories.app"
             BlueprintName = "myMemories"
             ReferencedContainer = "container:myMemories.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA1607081F2AB55C00680948"
+            BlueprintIdentifier = "F555036E1F2AB56400F7B9F2"
             BuildableName = "myMemories.app"
             BlueprintName = "myMemories"
             ReferencedContainer = "container:myMemories.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA1607081F2AB55C00680948"
+            BlueprintIdentifier = "F555036E1F2AB56400F7B9F2"
             BuildableName = "myMemories.app"
             BlueprintName = "myMemories"
             ReferencedContainer = "container:myMemories.xcodeproj">
