@@ -14,6 +14,7 @@ class MemoriesViewController: UICollectionViewController, UIImagePickerControlle
     var audioRecorder: AVAudioRecorder?
     var recordingURL: URL!
     var audioPlayer: AVAudioPlayer?
+    var searchQuery: CSSearchQuery?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -292,7 +293,6 @@ class MemoriesViewController: UICollectionViewController, UIImagePickerControlle
     
     func searchBarSearchButton(_ searchBar: UISearchBar){
         searchBar.resignFirstResponder()
-            //dsfsdfsd
     }
     
     func filterMemories(text: String){
@@ -305,7 +305,7 @@ class MemoriesViewController: UICollectionViewController, UIImagePickerControlle
         }
         
         var allItems = [CSSearchableItem]()
-        var searchQuery: CSSearchQuery?
+        searchQuery?.cancel()
         let queryString = "contentsDescription == \"*\(text)*\"c"
         searchQuery = CSSearchQuery(queryString: queryString, attributes: nil)
         searchQuery?.foundItemsHandler = { items in allItems.append(contentsOf: items) }
