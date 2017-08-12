@@ -250,6 +250,8 @@ class MemoriesViewController: UICollectionViewController, UIImagePickerControlle
             
             try text.write(to: transcription, atomically: true, encoding: String.Encoding.utf8)
             
+            self.indexMemory(memory: memory, text: text)
+            
         } catch let error {
             
             print("falha ao salvar transcricao de audio:  \(error)")
@@ -275,6 +277,8 @@ class MemoriesViewController: UICollectionViewController, UIImagePickerControlle
                 do {
                     print(text)
                     try text.write(to: transcription, atomically: true, encoding: String.Encoding.utf8)
+                    
+                    self.indexMemory(memory: memory, text: text)
                 } catch let error {
                     print("falha ao salvar transcricao de audio:  \(error)")
                 }
@@ -337,6 +341,30 @@ class MemoriesViewController: UICollectionViewController, UIImagePickerControlle
         return memory.appendingPathExtension("jpg")
     }
     
+    
+    func indexMemory(memory: URL, text: String){
+        let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
+        
+        attributeSet.title = "My memories App"
+        attributeSet.contentDescription = text
+        attributeSet.thumbnailURL = thumbnailURL(for: memory)
+        
+        let item = CSSearchableItem(uniqueIdentifier: memory.path, domainIdentifier: "br.utfpr.myMemories", attributeSet: attributeSet)
+        
+        item.expirationDate = Date.distantFuture
+        
+        CSSearchableIndex.default().indexSearchableItems([item]) {
+            error in
+            
+            if let error = error {
+                print("Erro de indexacao: \(error.localizedDescription)")
+            }else {
+                print("success")
+            }
+            
+        }
+        
+    }
     
     /*func teste(sender: UILongPressGestureRecognizer){
      if sender.state == .began {
