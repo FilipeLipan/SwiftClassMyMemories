@@ -225,14 +225,41 @@ class MemoriesViewController: UICollectionViewController, UIImagePickerControlle
                 audioPlayer = try AVAudioPlayer(contentsOf: audioName)
                 audioPlayer?.play()
             }
+            
+            let transcriptionName = transcriptionURL(for: memory)
+            
+            if fileManager.fileExists(atPath: transcriptionName.path){
+                
+                let contents = try String(contentsOf: transcriptionName)
+                
+                print(contents)
+            }
+            
         } catch let error {
             print("falha ao reproduzir audio:  \(error)")
         }
     }
     
+    func transcribeHack(memory: URL){
+        let transcription = transcriptionURL(for: memory)
+        
+        let text = "Minha memoria do dia 08/07"
+        
+        do {
+            print(text)
+            
+            try text.write(to: transcription, atomically: true, encoding: String.Encoding.utf8)
+            
+        } catch let error {
+            
+            print("falha ao salvar transcricao de audio:  \(error)")
+            
+        }
+    }
+    
     func transcribeAudio(memory: URL) {
-        let audio = memory//.appendingPathExtension("m4a")
-        let transcription = memory.appendingPathExtension("txt")
+        let audio = audrioURL(for: memory)
+        let transcription = transcriptionURL(for: memory)
         let recognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "pt-BR"))
         let request = SFSpeechURLRecognitionRequest(url: audio)
         recognizer?.recognitionTask(with: request){
