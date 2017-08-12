@@ -292,6 +292,7 @@ class MemoriesViewController: UICollectionViewController, UIImagePickerControlle
     
     func searchBarSearchButton(_ searchBar: UISearchBar){
         searchBar.resignFirstResponder()
+            //dsfsdfsd
     }
     
     func filterMemories(text: String){
